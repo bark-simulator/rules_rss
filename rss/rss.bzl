@@ -35,8 +35,9 @@ def rss_dependencies():
     # )
 
     _maybe(
-    git_repository,
+    new_git_repository,
     name = "map_support",
+    build_file = "@com_github_rules_rss//rss:map_support.BUILD",
     commit = "843bc200be635b9a1c359ddb471115b1150300f6",
     remote = "https://github.com/carla-simulator/map"
     )
