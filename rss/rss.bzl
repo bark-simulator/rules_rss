@@ -24,13 +24,20 @@ def rss_dependencies():
     urls = ["https://github.com/gabime/spdlog/archive/v1.7.0.tar.gz"],
     )
 
+    # _maybe(
+    # http_archive,
+    # name = "map_support",
+    # build_file = "@com_github_rules_rss//rss:map_support.BUILD",
+    # sha256 = "2f2ea3da842ad599c6f70b8976287eb52c994e277626f545dbf7d5c51f0595ca",
+    # strip_prefix = "map-2.2.1",
+    # urls = ["https://github.com/carla-simulator/map/archive/v2.2.1.tar.gz"],
+    # )
+
     _maybe(
-    http_archive,
+    git_repository,
     name = "map_support",
-    build_file = "@com_github_rules_rss//rss:map_support.BUILD",
-    sha256 = "2f2ea3da842ad599c6f70b8976287eb52c994e277626f545dbf7d5c51f0595ca",
-    strip_prefix = "map-2.2.1",
-    urls = ["https://github.com/carla-simulator/map/archive/v2.2.1.tar.gz"],
+    commit = "843bc200be635b9a1c359ddb471115b1150300f6",
+    remote = "https://github.com/carla-simulator/map"
     )
 
     _maybe(
